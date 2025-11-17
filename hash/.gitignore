@@ -1,0 +1,4 @@
+*.o
+hash_tool
+*.enc
+*.dec

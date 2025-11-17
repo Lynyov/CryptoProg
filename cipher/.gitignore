@@ -1,0 +1,5 @@
+*.o
+hash
+*.enc
+*.dec
+test_*
