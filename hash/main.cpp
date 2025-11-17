@@ -21,7 +21,7 @@ string calculate_file_hash(const string& filename) {
             throw runtime_error("Не удалось открыть файл: " + filename);
         }
 
-        SHA1 hash;  // Изменено с SHA256 на SHA1
+        SHA1 hash;
         string digest;
         FileSource file_source(filename.c_str(), true, 
             new HashFilter(hash, new HexEncoder(new StringSink(digest))));
@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
     try {
         string hash_result = calculate_file_hash(filename);
         cout << "Файл: " << filename << endl;
-        cout << "SHA-1: " << hash_result << endl;  // Изменено с SHA-256 на SHA-1
+        cout << "SHA-1: " << hash_result << endl;
     }
     catch (const exception& e) {
         cerr << "Ошибка: " << e.what() << endl;
